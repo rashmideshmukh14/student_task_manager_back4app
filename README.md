@@ -156,10 +156,10 @@ Field names are case-sensitive, so use lowercase names exactly as written.
 
 | Field Name | Type | Description |
 |---|---|---|
-| title | String | Stores the task title |
-| description | String | Stores the task description |
+| Title | String | Stores the task title |
+| Description | String | Stores the task description |
 | isCompleted | Boolean | Stores whether the task is completed |
-| owner | Pointer to `_User` | Links the task to the logged-in user |
+| Owner | Pointer to `_User` | Links the task to the logged-in user |
 
 ---
 
@@ -168,23 +168,11 @@ Field names are case-sensitive, so use lowercase names exactly as written.
 The Flutter code expects these exact field names:
 
 ```text
-title
-description
-isCompleted
-owner
-```
-
-Do not use:
-
-```text
 Title
 Description
-Completed
+isCompleted
 Owner
-taskTitle
-taskDescription
 ```
-
 If field names do not match exactly, the app may show errors or fail to save data.
 
 ---
