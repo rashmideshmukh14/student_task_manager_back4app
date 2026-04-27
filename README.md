@@ -156,10 +156,10 @@ Field names are case-sensitive, so use lowercase names exactly as written.
 
 | Field Name | Type | Description |
 |---|---|---|
-| title | String | Stores the task title |
-| description | String | Stores the task description |
+| Title | String | Stores the task title |
+| Description | String | Stores the task description |
 | isCompleted | Boolean | Stores whether the task is completed |
-| owner | Pointer to `_User` | Links the task to the logged-in user |
+| Owner | Pointer to `_User` | Links the task to the logged-in user |
 
 ---
 
@@ -168,23 +168,11 @@ Field names are case-sensitive, so use lowercase names exactly as written.
 The Flutter code expects these exact field names:
 
 ```text
-title
-description
-isCompleted
-owner
-```
-
-Do not use:
-
-```text
 Title
 Description
-Completed
+isCompleted
 Owner
-taskTitle
-taskDescription
 ```
-
 If field names do not match exactly, the app may show errors or fail to save data.
 
 ---
@@ -204,7 +192,7 @@ String
 4. Enter column name:
 
 ```text
-title
+Title
 ```
 
 5. Save.
@@ -223,7 +211,7 @@ String
 3. Enter column name:
 
 ```text
-description
+Description
 ```
 
 4. Save.
@@ -267,7 +255,7 @@ _User
 4. Enter column name:
 
 ```text
-owner
+Owner
 ```
 
 5. Save.
@@ -281,10 +269,10 @@ After setup, the `Task` class should contain these fields:
 | Field Name | Type |
 |---|---|
 | objectId | String / Auto-generated |
-| title | String |
-| description | String |
+| Title | String |
+| Description | String |
 | isCompleted | Boolean |
-| owner | Pointer to `_User` |
+| Owner | Pointer to `_User` |
 | createdAt | Date / Auto-generated |
 | updatedAt | Date / Auto-generated |
 | ACL | ACL / Auto-generated |
@@ -301,10 +289,10 @@ ACL
 You only need to manually create:
 
 ```text
-title
-description
+Title
+Description
 isCompleted
-owner
+Owner
 ```
 
 ---
@@ -400,10 +388,10 @@ The `Task` class stores academic task records.
 
 | Field | Type | Description |
 |---|---|---|
-| title | String | Academic task title |
-| description | String | Academic task details |
+| Title | String | Academic task title |
+| Description | String | Academic task details |
 | isCompleted | Boolean | Task completion status |
-| owner | Pointer to `_User` | User who created the task |
+| Owner | Pointer to `_User` | User who created the task |
 
 ---
 
@@ -412,10 +400,10 @@ The `Task` class stores academic task records.
 When a student creates a task, the app saves data like this:
 
 ```text
-title → Task title entered by user
-description → Task description entered by user
+Title → Task title entered by user
+Description → Task description entered by user
 isCompleted → false by default
-owner → currently logged-in user
+Owner → currently logged-in user
 ```
 
 When a student marks a task as completed, the app updates:
@@ -502,8 +490,8 @@ The app fetches all tasks created by the currently logged-in user.
 The user can edit:
 
 ```text
-title
-description
+Title
+Description
 ```
 
 The updated values are saved in the cloud database.
@@ -606,34 +594,7 @@ student_task_manager_back4app
  │    └── main.dart
  ├── pubspec.yaml
  ├── README.md
- └── screenshots
 ```
-
----
-
-## Screenshots
-
-Add screenshots inside a folder named:
-
-```text
-screenshots
-```
-
-Recommended screenshots:
-
-1. Registration Screen
-2. Login Screen
-3. Student Dashboard
-4. Create Task Screen
-5. Task Created
-6. Task Updated
-7. Task Marked Completed
-8. Task Deleted
-9. Back4App `_User` Class
-10. Back4App `Task` Class
-11. GitHub Repository Page
-
----
 
 ## Common Errors and Fixes
 
@@ -648,10 +609,10 @@ Fix:
 Manually create all required fields:
 
 ```text
-title
-description
+Title
+Description
 isCompleted
-owner
+Owner
 ```
 
 Or temporarily enable:
@@ -706,7 +667,7 @@ for authenticated users in the `Task` class permissions.
 Possible reasons:
 
 1. Field names are incorrect.
-2. `owner` column is missing.
+2. `Owner` column is missing.
 3. User is not logged in.
 4. `Find` or `Get` permission is not enabled.
 
@@ -715,10 +676,10 @@ Fix:
 Check that field names are exactly:
 
 ```text
-title
-description
+Title
+Description
 isCompleted
-owner
+Owner
 ```
 
 ---
@@ -765,36 +726,6 @@ cross-platform
 student-project
 ```
 
----
-
-## Deliverables
-
-This project includes the following assignment deliverables:
-
-1. GitHub Repository with source code
-2. README file with setup instructions
-3. Screenshots
-4. PPT Presentation
-5. YouTube demo video link
-
----
-
-## Demo Video Flow
-
-The demo video should show:
-
-1. App launch
-2. Student registration
-3. Student login
-4. Create task
-5. Update task
-6. Mark task as completed
-7. Delete task
-8. Logout
-9. Back4App database records
-
----
-
 ## Conclusion
 
 This project demonstrates a Flutter-based CRUD application integrated with Back4App Backend-as-a-Service.
@@ -808,7 +739,7 @@ The project helps in understanding cross-platform application development and in
 ## Author
 
 ```text
-Name: Your Name
+Name: Rashmi Milind Deshmukh
 Subject: Cross Platform Application Development
 Project: Task Manager App using Flutter and Back4App
 ```
